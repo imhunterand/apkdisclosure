@@ -10,9 +10,13 @@ Alat ini dikembangkan untuk memindai file APK (Android Package) guna mendeteksi 
 4. Integrasi VirusTotal: Memeriksa hash file di VirusTotal menggunakan API untuk mendapatkan laporan deteksi malware.
 
 ## Tata Cara Penggunaan
-1. **Persiapan**: Pastikan Python telah terinstal di lingkungan Anda. Install library yang diperlukan dengan menjalankan `pip install -r requirements.txt`.
+1. **Persiapan**: Pastikan Python telah terinstal di lingkungan Anda. Install library yang diperlukan dengan menjalankan 
+
+```
+pip install -r requirements.txt.
+```
 2. **Menjalankan Alat**: Buka terminal atau command prompt, lalu jalankan alat dengan perintah:
-   ```bash
+```bash
    python apk_scanner.py
 ```
 3. **Input:** Masukkan path lengkap ke file APK yang ingin Anda pindai.
