@@ -5,6 +5,27 @@ import hashlib
 import requests
 from androguard.core.bytecodes.apk import APK
 
+# ANSI escape code for green color
+GREEN = '\033[92m'
+RESET = '\033[0m'
+
+ascii_art = f"""
+{GREEN}
+                 _    _____  _          _                          
+     /\         | |  |  __ \(_)        | |                         
+    /  \   _ __ | | _| |  | |_ ___  ___| | ___  ___ _   _ _ __ ___ 
+   / /\ \ | '_ \| |/ / |  | | / __|/ __| |/ _ \/ __| | | | '__/ _ \
+  / ____ \| |_) |   <| |__| | \__ \ (__| | (_) \__ \ |_| | | |  __/
+ /_/    \_\ .__/|_|\_\_____/|_|___/\___|_|\___/|___/\__,_|_|  \___|
+          | |                                                      
+          |_|                                  
+                                                
+{RESET}
+"""
+
+def print_ascii_art():
+    print(ascii_art)
+
 def extract_strings_from_apk(apk_path):
     """
     Extract all strings from an APK file.
@@ -53,6 +74,7 @@ def scan_apk(apk_path):
     """
     Scan the APK file for URIs, endpoints, and secrets.
     """
+    print_ascii_art()
     print(f"Scanning APK: {apk_path}")
     file_strings = extract_strings_from_apk(apk_path)
     found_items = find_uris_endpoints_secrets(file_strings)
